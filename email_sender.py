@@ -1,7 +1,10 @@
 import smtplib
 
 from email.message import EmailMessage
+from string import Template
+from pathlib import Path
 
+html = Template(Path('index.html').read_text())
 email = EmailMessage()
 email['from'] = 'Leslie Williams'
 email['to'] = 'l.marie1598@gmail.com'
